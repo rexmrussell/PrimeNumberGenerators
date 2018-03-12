@@ -15,7 +15,7 @@ for z in PN:print z # print all primes to terminal
 # Tested on March 1, 2018
 #
 # Script Data:
-# Generated 100,000 prime numbers starting with 2 and ending with 1,299,709
+# Generated 100,000 prime numbers starting with 2 and ending with 1,299,689
 #
 # TIME: real	0m6.200s
 # TIME: user	0m6.124s
