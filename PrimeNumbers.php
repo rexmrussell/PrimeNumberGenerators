@@ -32,3 +32,6 @@ if($np==$n){break;}}} # quits the program once there are "n" primes in "pn"
 # cpu MHz		: 2394.562
 # cache size	: 30720 KB
 # MemTotal: 2.049 GB
+#
+# PHP 7.0.27 (cli) (built: Jan 25 2018 22:40:53) ( NTS )
+#
