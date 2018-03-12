@@ -36,3 +36,4 @@ done;
 # cache size	: 30720 KB
 # MemTotal: 2.049 GB
 #
+# Bash version 4.2.46(2)-release (x86_64-redhat-linux-gnu)
