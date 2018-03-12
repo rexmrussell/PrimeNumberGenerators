@@ -31,3 +31,5 @@ if($pn==$n){last;}}} # exit after "n" primes have been generated
 # cache size	: 30720 KB
 # MemTotal: 2.049 GB
 #
+# perl 5, version 16, subversion 3 (v5.16.3) built for x86_64-linux-thread-multi
+#
