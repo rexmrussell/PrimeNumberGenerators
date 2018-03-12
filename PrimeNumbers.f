@@ -55,3 +55,5 @@ end program prime ! compile using: gfortran -ffree-form PrimeNumbers.f
 ! cache size	: 30720 KB
 ! MemTotal: 2.049 GB
 !
+! GNU Fortran (GCC) 4.8.5 20150623 (Red Hat 4.8.5-11)
+!
