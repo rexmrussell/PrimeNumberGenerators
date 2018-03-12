@@ -27,3 +27,4 @@ if(PN.length==n){break;}} // Exits once "n" primes have been generated
 // cache size	: 30720 KB
 // MemTotal: 2.049 GB
 //
+// Node version: v9.8.0
