@@ -9,7 +9,7 @@ for (var i=3;i<=z;i=i+2) { // loops through odd numbers
   }
   if (v!==0) {PN.push(i); // if i is prime, then put it into "PN"
     console.log(i); // print the results to terminal
-    if(PN.length===n){break;} // Exits once "n" primes have been generated
+    if (PN.length===n) {break;} // Exits once "n" primes have been generated
   }
 }
 
