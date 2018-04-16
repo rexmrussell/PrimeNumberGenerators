@@ -17,28 +17,29 @@ print *, prm(1) ! print first prime to terminal
 print *, prm(2) ! print second prime to terminal
 print *, prm(3) ! print third prime to terminal
 do ! start first loop
-is_prime = .true. ! assume prime
-f2 = sqrt(f1) ! get squareroot of highest index number of "prm" array
-f3 = nint(f2) ! make f3 an integer of f2
-do i = 1, f3 ! the squareroot of the index of "prm" set as the upper-limit
-if (modulo(at, prm(i)) == 0) then ! is "at" divisible by any number in "prm"?
-is_prime = .false. ! "at" is not prime.
-exit ! get new value "at" to test
-end if
-end do  ! move on, none of "prm" values will divide evenly into "at"
-if (is_prime) then ! if "at" is prime...
-found = found + 1 ! increase the number of primes "found" by one
-f1 = f1 +1 ! increase the index ceiling by one
-prm(found) = at ! insert prime number "at" into "prm" at index "found"
-print *, at ! print "at" to terminal
-end if
-at = at + 2 ! increase the value of "at" by one
-if (found==np) then ! stop when all primes are found
-exit
-end if
-end do
-end program prime ! compile using: gfortran -ffree-form PrimeNumbers.f
+  is_prime = .true. ! assume prime
+  f2 = sqrt(f1) ! get squareroot of highest index number of "prm" array
+  f3 = nint(f2) ! make f3 an integer of f2
+    do i = 1, f3 ! the squareroot of the index of "prm" set as the upper-limit
+      if (modulo(at, prm(i)) == 0) then ! is "at" divisible by any number in "prm"?
+        is_prime = .false. ! "at" is not prime.
+        exit ! get new value "at" to test
+      end if
+    end do  ! move on, none of "prm" values will divide evenly into "at"
+  if (is_prime) then ! if "at" is prime...
+    found = found + 1 ! increase the number of primes "found" by one
+    f1 = f1 +1 ! increase the index ceiling by one   
+    prm(found) = at ! insert prime number "at" into "prm" at index "found"
+    print *, at ! print "at" to terminal
+    end if
+  at = at + 2 ! increase the value of "at" by one
+  if (found==np) then ! stop when all primes are found
+    exit
+    end if
+  end do 
+end program prime 
 
+! compile using: gfortran -ffree-form PrimeNumbers.f
 ! Tested on March 1, 2018
 !
 ! Script Data:
