@@ -1,18 +1,23 @@
-#!/usr/local/bin/python3.6
-from math import sqrt # import squareroot module
-n=int(100000) # number of primes to generate
-z=n*100 # allows large enough primes for n primes
-PN=[2,3,5] # array into which primes will be stored
-for i in range(7,z,2): # loops through odd numbers to be check for prime
-    for ii in range(0,int(sqrt(len(PN))),1): # loops through "PN" values to test i
-        w = i%PN[ii] # modulus check on i with each value "PN"
-        if (w==0): break # if i can be evenly divided by a value "PN", get new i
-    if(w!=0):PN.append(i) # if i cannot be evenly divided by "PN", insert i into "PN"
-    x=(len(PN)); # get the number of values in "PN"
-    if(x==n):break # exit program once n number of primes have been generated
-for z in PN:
-    print (z) # print all primes to terminal
-
+#!/bin/python3
+from math import sqrt
+NumberOfPrimes=int(100000)
+End=NumberOfPrimes*100
+PrimeNumbersArray=[2,3,5]
+for candidate in range(7, End, 2): #loops through odd numbers to be check for prime    
+    for denominator in PrimeNumbersArray: #loops through denominator to determine if candidate is prime
+        if denominator > sqrt(candidate): 
+            break
+        ModResult = candidate%PrimeNumbersArray[denominator] # Modulus check to determine if candidate is prime
+        if (ModResult==0): 
+            break 
+    if(ModResult!=0):
+        PrimeNumbersArray.append(candidate)
+    SizeOfPrimeNumbersArray=(len(PrimeNumbersArray)); 
+    if(SizeOfPrimeNumbersArray==NumberOfPrimes): # Exit the program once the desired number of primes has been reached
+        break
+for NumberCeiling in PrimeNumbersArray: # Print results
+    print (NumberCeiling)
+    
 # Tested on March 12, 2018
 #
 # Script Data:
